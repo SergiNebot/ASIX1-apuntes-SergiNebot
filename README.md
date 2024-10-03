@@ -63,7 +63,7 @@ Ejemplo:
 
 ### Como poner una imagen
 
-![Horario]("horario.png" "Horario")
+![horario](horario.png "horario")
 
 ### Tablas
 | Titulo 1 | Titulo 2 | Titulo 3 |
