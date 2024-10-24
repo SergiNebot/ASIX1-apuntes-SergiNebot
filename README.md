@@ -123,3 +123,26 @@ La legibilidad del codigo fuente es la claridad con lo que esta modificado.
 ## Organización de los archivos
 
 ## Etiquetas basicas de HTML
+
+Las listas de definicion se caracterizan por ser una enumeracion de definiciones de terminos.
+
+En HTML, cuando necesitamos enlazar a otros archivos, ya sean documentos HTML, hojas de estilo css o imagenes, podemos usar rutas para especificar la ubicación de estos archivos. Existen dos tipos de rutas:
+
+- **Ruta Absoluta**
+  <br>
+  Una ruta absoluta especifica la ubicación completa del archivo en la web, comenzando desde el dominio.
+  
+  ![Ruta Absoluta](rutaabsolutaejemplo.png "Ejemplo Ruta Absoluta")
+  
+- **Ruta Relativa**
+  <br>
+  Una ruta relativa especifica la ubicación del archivo en relacion con la ubicacion del documento actual.
+
+  ![Ruta Relativa](rutarelativaejemplo.png "Ejemplo Ruta Relativa")
+
+
+- **Imagenes**
+<br>
+  Las imagenes son un recurso son un recurso muy utilizados en el desarrollo web.
+
+  
