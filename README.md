@@ -1,5 +1,20 @@
 # ASIX1-apuntes-SergiNebot
-# Capitulo 1 ```Markdown```
+# Capitulo 1 ``GitHub``
+
+Para clonar el repositorio que hemos creado, primero tendremos que crear una carpeta local en la que querramos guardar el repositorio, y despues iremos al cmd de la carpeta en la que queramos guardar ese repositorio y luego escribiremos lo siguiente:
+``git clone (url)``
+
+Cuando queramos hacer una copia de seguridad tendremos que seguir los siguientes pasos:
+```
+git init
+git branch (para saber en que rama esta el repositorio)
+git branch -M main (es por si no funciona y despues de haber ejecutado este comando tendriamos volver a poner el git branch)
+git add (añadir archivos que se van a subir)
+git commit -m (mensaje) "Texto de lo que hemos modificado" (Para guardar los cambios)
+git push origin main
+```
+
+# Capitulo 2 ```Markdown```
 ## Segundo nivel de encabezado
 ### Tercer nivel de encabezado
 #### Cuarto nivel de encabezado
@@ -16,13 +31,13 @@ Ejemplo:
 
 Para ponerlo en cursiva se puede poner de las siguientes formas:
 
-*Texto que quieras añadir*
+``*Texto que quieras añadir*``
 
-_Texto que quieras añadir_
+``_Texto que quieras añadir_``
 
 Y si quieres poner la palabra en cursiva y negrita a la vez se tendran que poner de la siguiente forma:
 
-**_Texto que quieras añadir _**
+``**_Texto que quieras añadir _**``
 
 
 
