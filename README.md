@@ -1,6 +1,12 @@
 # ASIX1-apuntes-SergiNebot
 # Capitulo 1 ``GitHub``
 
+## Que es ``Github?``
+Es un Sistema de control de versiones, que nos ayuda a llevar un historial completo de modificaciónes y avances que realizamos en proyectos.
+## Caracteristicas de GitHub
+1. Funciona como una maquina del tiempo (Por las copias de seguridad que hayamos subido)
+2. Trabaja con ramas (permite sacar bifuracciones para no comprometes a la rama principal)
+3. Trabaja de forma colaborativa ()
 ## Como clonar repositorios de GitHub?
 Para clonar el repositorio que hemos creado, primero tendremos que crear una carpeta local en la que querramos guardar el repositorio, y despues iremos al cmd de la carpeta en la que queramos guardar ese repositorio y luego escribiremos lo siguiente:
 ``git clone (url)``
