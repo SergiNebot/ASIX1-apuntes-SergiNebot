@@ -1,15 +1,18 @@
 # ASIX1-apuntes-SergiNebot
 # Capitulo 1 ``GitHub``
 
+## Como clonar repositorios de GitHub?
 Para clonar el repositorio que hemos creado, primero tendremos que crear una carpeta local en la que querramos guardar el repositorio, y despues iremos al cmd de la carpeta en la que queramos guardar ese repositorio y luego escribiremos lo siguiente:
 ``git clone (url)``
 
-Cuando queramos hacer una copia de seguridad tendremos que seguir los siguientes pasos:
+### Como subir una copia de seguridad al GitHub?
+
+Cuando queramos hacer una copia de seguridad tendremos que entrar en el cmd dentro de la carpeta que se nos haya creado al clonar el repositorio y luego escribiremos los sigiuientes comandos en el orden en el que estan:
 ```
 git init
 git branch (para saber en que rama esta el repositorio)
 git branch -M main (es por si no funciona y despues de haber ejecutado este comando tendriamos volver a poner el git branch)
-git add (añadir archivos que se van a subir)
+git add (añadir archivos que se van a subir ("."=todos los archivos))
 git commit -m (mensaje) "Texto de lo que hemos modificado" (Para guardar los cambios)
 git push origin main
 ```
