@@ -6,7 +6,7 @@ Es un Sistema de control de versiones, que nos ayuda a llevar un historial compl
 ## Caracteristicas de GitHub
 1. Funciona como una maquina del tiempo (Por las copias de seguridad que hayamos subido)
 2. Trabaja con ramas (permite sacar bifuracciones para no comprometes a la rama principal)
-3. Trabaja de forma colaborativa ()
+3. Trabaja de forma colaborativa
 ## Como clonar repositorios de GitHub?
 Para clonar el repositorio que hemos creado, primero tendremos que crear una carpeta local en la que querramos guardar el repositorio, y despues iremos al cmd de la carpeta en la que queramos guardar ese repositorio y luego escribiremos lo siguiente:
 ``git clone (url)``
@@ -109,6 +109,19 @@ Ejemplo:
 - Languaje 
 
 ## Introducción a HTML (elementos)
+- **HTML no es un lenguaje de programación**, es un lenguaje de marcado que define la estructura de su contenido.
+
+- Esto implica que la información a mostrar ha de ir "etiquetados" para formar elementos que el navegador web sepa interpretar de qué tipo de información se trata y como tal sepa cómo representarlos.
+- Las partes principales del elemento son:
+
+  - Etiqueta de apertura: consiste en el nombre del elemento y esta encerrado por paréntesis angulares (<>)
+  
+  - La etiqueta de cierre: es igual que la etiqueta de apertura, excepto que incluye una barra de cierre ( / )
+
+  - El contenido: este es el contenido del elemento, que en este caso es sólo texto.
+
+
+  - El elemento: la etiqueta de apertura, más la etiqueta de cierre, más el contenido equivale al elemento.
 
 ## Introducción a HTML (atributos)
 
@@ -131,6 +144,16 @@ Los atributos siempre incluyen en la etiqueta de apertura de un elemento y deben
 - El head contiene metadatos y enlaces a hojas de estilo y scripts, mientras el body contiene el contenido principal de la página web.
 
 ## Elementos de bloque y linea
+Dentro del cuerpo del documento debemos incluir todo el contenido de la web, la información que queremos que vea el usuario final de la web.
+
+- Elementos de bloque
+  Son grandes estructuras que contienen otros elementos de bloque, elementos de linea y de texto. Ejemplos de elementos de bloque los titulos, parrafos, las listas o las tablas:<br>
+  ```<h1> - <h6> (encabezado), <p> (párrafo), <br> (salto de línea), <hr> (separador), <blockquote> (cita), <pre> (texto preformateado), <div> (división)```
+
+- Elementos de línea
+  Son pequeñas estructuras que representan o describen pequeños trozos de texto o datos. Pueden contener solo texto u otros elementos de línea. 
+  Ejemplos de elementos de línea los hipervínculos, las citas o las imágenes:<br>
+  ```<em> (énfasis/cursiva), <strong> (fuerte énfasis/negrita), <q> (citas cortas), <span> (rango), <cite>, <abbr>, <code>```
 
 ## Resumen de normas básicas de etiquetas HTML
 
