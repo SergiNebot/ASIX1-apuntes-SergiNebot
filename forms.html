@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="recepcion.php" method="POST">
+        <label for="Nombre">Nombre:</label>
+        <input type="text" id="Nombre" name="nombre" placeholder="Introduce tu nombre">
+        <br>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Introduce tu contraseña">
+        <br>
+        <br>
+        <fieldset>
+        <legend>Idioma</legend>
+        <label for="castellano">Castellano</label>
+        <input type="radio" id="castellano" name="idioma" value="castellano">
+        <label for="catalan">Catalàn</label>
+        <input type="radio" id="catalan" name="idioma" value="catalan">
+        <label for="chino">Chino</label>
+        <input type="radio" id="chino" name="idioma" value="chino">  
+        </fieldset>
+        <fieldset>
+            <legend>Nacionalidad</legend>
+            <label for="Española">Española</label>
+            <input type="checkbox" id="espanola" name="nacionalidad" value="Española">
+            <label for="frances">Francesa (NUNCA)</label>
+            <input type="checkbox" id="francesa" name="nacionalidad" value="Frances">
+            <label for="chino">Canadiense</label>
+            <input type="checkbox" id="canadiense" name="idioma" value="Canadiense"> 
+        </fieldset>
+        <legend for="observaciones">Observaciones</legend>
+        <textarea name="observaciones" id="observaciones" cols="80" rows="4" placeholder="Introduce tus comentarios"></textarea>
+        <br>
+        <br>
+        <label for="ciudad">Ciudad</label>
+        <select id="ciudad" name="ciudad">  
+            <option value="" disabled selected>Selecciona una ciudad</option>
+            <option value="Barcelona">Barcelona</option>
+            <option value="Madrid">Madrid</option>
+            <option value="Valencia">Valencia</option>
+            <option value="Sevilla">Sevilla</option>
+            <option value="Granada">Granada</option>
+            <option value="Murcia">Murcia</option> 
+        </select>
+        <br>
+        <br>
+        <button type="submit">Enviar Datos</button>
+        <button type="reset">Borrar Datos</button>
+    </form>
+</body>
+</html>

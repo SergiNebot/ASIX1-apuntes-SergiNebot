@@ -36,17 +36,17 @@ El "#" genera encabezados
 
 Para poner la letra en negrita se tendran que poner dos ** al principio y al final. 
 Ejemplo:
-**Texto que quieras añadir**
+```**Texto que quieras añadir**```
 
 Para ponerlo en cursiva se puede poner de las siguientes formas:
 
-``*Texto que quieras añadir*``
+```*Texto que quieras añadir*```
 
-``_Texto que quieras añadir_``
+```_Texto que quieras añadir_```
 
 Y si quieres poner la palabra en cursiva y negrita a la vez se tendran que poner de la siguiente forma:
 
-``**_Texto que quieras añadir _**``
+```**_Texto que quieras añadir _**```
 
 
 
@@ -64,6 +64,9 @@ Y si quieres poner la palabra en cursiva y negrita a la vez se tendran que poner
 + Tercer punto
 
 **Como mosotras codigo en un repositorio**
+
+Tendremos que colocar el codigo dentro de ``` y luego volver a cerrarlo con lo mismo con lo que lo hemos abierto
+
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -79,15 +82,17 @@ Y si quieres poner la palabra en cursiva y negrita a la vez se tendran que poner
 ```
 
 ### Como poner un link
-
+```
 [TextoClicable](URL "Titulo Opcional")
-
+```
 Ejemplo:
-
+```
 [Página web de Jesuïtes Bellvitge](https://www.fje.edu/ca/jesuites-bellvitge "Titulo Opcional")
-
+```
+[Página web de Jesuïtes Bellvitge](https://www.fje.edu/ca/jesuites-bellvitge "Titulo Opcional")
 ### Como poner una imagen
 
+```![horario](horario.png "horario")```
 ![horario](horario.png "horario")
 
 ### Tablas
@@ -139,31 +144,31 @@ Los atributos siempre incluyen en la etiqueta de apertura de un elemento y deben
   
 ## Estructura basica de un fichero HTML
 
-- Una página HTML incluye una declaración DOCTYPE, un elemento html, y dentro de este, un head y un body.
+Una página HTML incluye una declaración DOCTYPE, un elemento html, y dentro de este, un head y un body.
   
-- El head contiene metadatos y enlaces a hojas de estilo y scripts, mientras el body contiene el contenido principal de la página web.
+El head contiene metadatos y enlaces a hojas de estilo y scripts, mientras el body contiene el contenido principal de la página web.
 
 ## Elementos de bloque y linea
 Dentro del cuerpo del documento debemos incluir todo el contenido de la web, la información que queremos que vea el usuario final de la web.
 
-- Elementos de bloque
+- **Elementos de bloque**
   Son grandes estructuras que contienen otros elementos de bloque, elementos de linea y de texto. Ejemplos de elementos de bloque los titulos, parrafos, las listas o las tablas:<br>
   ```<h1> - <h6> (encabezado), <p> (párrafo), <br> (salto de línea), <hr> (separador), <blockquote> (cita), <pre> (texto preformateado), <div> (división)```
 
-- Elementos de línea
+- **Elementos de línea**
   Son pequeñas estructuras que representan o describen pequeños trozos de texto o datos. Pueden contener solo texto u otros elementos de línea. 
   Ejemplos de elementos de línea los hipervínculos, las citas o las imágenes:<br>
   ```<em> (énfasis/cursiva), <strong> (fuerte énfasis/negrita), <q> (citas cortas), <span> (rango), <cite>, <abbr>, <code>```
 
 ## Resumen de normas básicas de etiquetas HTML
 
-- Las etiquetas HTML normalmente vienen en pares, con una etiqueta de apertura y una de cierre, por ejemplo ```<p> y </p>```
+Las etiquetas HTML normalmente vienen en pares, con una etiqueta de apertura y una de cierre, por ejemplo ```<p> y </p>```
 
-- Algunas etiquetas, conocidas como etiquetas vacías, no tienen una etiqueta de cierre, como ```<img>, <br> y <input>.```
+Algunas etiquetas, conocidas como etiquetas vacías, no tienen una etiqueta de cierre, como ```<img>, <br> y <input>.```
 
-- Las etiquetas HTML deben anidarse correctamente. Por ejemplo, si una etiqueta ```<b>``` se abre dentro de una etiqueta ```<p>``` debe cerrarse antes de que se cierre la etiqueta ```<p>```.
+Las etiquetas HTML deben anidarse correctamente. Por ejemplo, si una etiqueta ```<b>``` se abre dentro de una etiqueta ```<p>``` debe cerrarse antes de que se cierre la etiqueta ```<p>```.
 
-- Los atributos de las etiquetas espeçifiçen en etiqueta de apertura y suelen tener el formato. Por ejemplo, en ```<img src="imagen.jpg">```, src especifica la ruta de la imagen.
+Los atributos de las etiquetas espeçifiçen en etiqueta de apertura y suelen tener el formato. Por ejemplo, en ```<img src="imagen.jpg">```, src especifica la ruta de la imagen.
 
 ## Legibilidad y organización de código
 
@@ -221,21 +226,18 @@ En HTML, cuando necesitamos enlazar a otros archivos, ya sean documentos HTML, h
   ![Ruta Relativa](rutarelativaejemplo.png "Ejemplo Ruta Relativa")
 
 
-- **Imagenes**
-<br>
-
-- Las imagenes son un recurso son un recurso muy utilizados en el desarrollo web. Ademas de hacer ,as atractiva nuestra aplicación, nos permite proporcionar información de manera visual.
-
-- Usamos el atributo src para indicar dónde está ubicada la imagen:<br>
+- **Imagenes**<br>
+  Las imagenes son un recurso son un recurso muy utilizados en el desarrollo web. Ademas de hacer ,as atractiva nuestra aplicación, nos permite proporcionar información de manera visual.<br><br>
+  Usamos el atributo src para indicar dónde está ubicada la imagen:<br>
   Podemos poner una URL externa o la ruta del archivo si tenemos la imagen localmente. También utilizaremos eI atributo alt para poner un texto alternativo que se mostrará en el caso de que el navegador no pueda mostrar o acceder a nuestra imagen.
 
-  **Enlaces (```<a>```)**
+- **Enlaces (```<a>```)**<br>
   El éxito de la WWW (World Wide Web) es la capacidad de sallar de un documento a otro mediante enlaces. El sistema que nos permite esta navegacion se llama hipertexto. La etiqueta HTML para crear estos enlaces es ```<a>```. Es una etiqueta de línea, ya que podemos colocar enlaces rodeados de texto.
 
-  **Enlaces a páginas externas**
+- **Enlaces a páginas externas**<br>
   Si queremos hacer un enlace a una página externa a nuestra aplicación web, como por ejemplo para enlazar al sitio web https://m.joan23.fje.edu/, pero el texto que queremos que aparezca en el navegador es implemente "Jesuïtes Bellvitge — Joan XXIII". EI código que debemos introducir es el siguiente: ```<p><a href="https://m.joan23.fje.edu/" title="Joan XXIII">Jesuïtes Bellvitge — Joan XXIII</a></p>```
 
-  **Enlaces a páginas locales**
+- **Enlaces a páginas locales**<br>
   Si el enlace que queremos hacer está dirigido a un documento local nuestro, podemos usar la ruta relativa al archivo al cual queremos enlazar en el atributo href.
   Por ejemplo:
 
@@ -246,21 +248,62 @@ En HTML, cuando necesitamos enlazar a otros archivos, ya sean documentos HTML, h
   <a href="secciones/actividades.html" title="Actividades actuales">Actividades</a>
   </div>
   ```
-  **Listas**
-  - Las listas desordenadas son aquellas en las que el orden de los ítems no es relevante, como en una lista de compras. Estas son encerradas en un elemento ```<ul> (unordered list)```. Se puede escoger el símbolo tipográfico indicandolo en la etiqueta Las opciones posibles son:
+- **Listas**<br>
+  Las listas desordenadas son aquellas en las que el orden de los ítems no es relevante, como en una lista de compras. Estas son encerradas en un elemento ```<ul> (unordered list)```. Se puede escoger el símbolo tipográfico indicandolo en la etiqueta Las opciones posibles son:
   - ```<ul type=Disc>```<br>
   - ```<ul type=square>```<br>
   - ```<<ul type=circle>```<br>
 
-  - Las listas ordenadas son aquellas en las que el orden sí es relevante, como en una receta. Estas son encerradas en un elemento ```<ol> (ordered list)```. Se puede escoger el tipo al enumerar una lista, por defecto es numérica y las otras opciones disponibles son:
+  Las listas ordenadas son aquellas en las que el orden sí es relevante, como en una receta. Estas son encerradas en un elemento ```<ol> (ordered list)```. Se puede escoger el tipo al enumerar una lista, por defecto es numérica y las otras opciones disponibles son:
   - ```<ol type=A>```
   - ```<ol type=a>```
   - ```<ol type=l>```
   - ```<ol type=i start=10>```
   - ```<ol type=l>```
   
-  - Añadiendo el parámetro start=n se fuerza la numeración a partir de un determinado valor. 
+  Añadiendo el parámetro start=n se fuerza la numeración a partir de un determinado valor. 
   
-  - Añadiendo el parámetro value=n se fuerza a que el elemento tenga el número de orden que indiquemos.
+  Añadiendo el parámetro value=n se fuerza a que el elemento tenga el número de orden que indiquemos.
   
-  - Cada elemento de la lista se coloca dentro de un elemento ```<li> (list item)```.
+  Cada elemento de la lista se coloca dentro de un elemento ```<li> (list item)```.
+
+## Elementos Semánticos en HTML 5
+
+Es la clave de saber usar HTML correctamente. ```<span>``` permite agrupar contenido en línea y ```<div>``` contenido en bloque. Pero no aporta un valor semántico.<br><br>
+El **HTML SEMÁNTICO consique en describir el contenido dándole un significado de forma correcta**.
+
+## Formularios
+
+
+
+## Etiquetas de formularios (form)
+
+
+
+## Etiquetas de formularios (input)
+
+
+
+## Etiquetas de formularios (textarea)
+
+
+
+## Etiquetas de formularios (label)
+
+
+
+## Etiquetas de formularios (select)
+
+
+
+## Etiquetas de formularios (select)
+
+
+
+## Etiquetas de formularios (fieldset/legend)
+
+
+
+## Etiquetas de formularios (button)
+
+
