@@ -111,11 +111,10 @@ Ejemplo:
 
 - Markup significa marca o etiqueta, ya que **todas las páginas web estan construidas en base a etiquetas**, desde las primeras versiones hasta las últimas etiquetas de **HTML5**.
 
-- Languaje, porque HTML es un lenguaje, tiene sus normas, estructura y una serie de convenciones que sirven para definir tanto como la estructura como el contenido de una web. Es importante saber que aunque HTML sea un lenjuage no se refiere a que es uno de programación, y no lo es porque no tiene estructuras de kenjuage de programación (los bucles, las condiciones, funciones, etc...)
+- Languaje, su significado es lenjuage, porque HTML es un lenguaje, tiene sus normas, estructura y una serie de convenciones que sirven para definir tanto como la estructura como el contenido de una web. Es importante saber que aunque HTML sea un lenjuage no se refiere a que es uno de programación, y no lo es porque no tiene estructuras de kenjuage de programación (los bucles, las condiciones, funciones, etc...)
 
 ## Introducción a HTML (elementos)
 - **HTML no es un lenguaje de programación**, es un lenguaje de marcado que define la estructura de su contenido.
-
 - Esto implica que la información a mostrar ha de ir "etiquetados" para formar elementos que el navegador web sepa interpretar de qué tipo de información se trata y como tal sepa cómo representarlos.
 - Las partes principales del elemento son:
 
