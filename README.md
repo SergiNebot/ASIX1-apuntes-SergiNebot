@@ -156,7 +156,7 @@ Dentro del cuerpo del documento debemos incluir todo el contenido de la web, la 
   ```<h1> - <h6> (encabezado), <p> (párrafo), <br> (salto de línea), <hr> (separador), <blockquote> (cita), <pre> (texto preformateado), <div> (división)```
 
 - **Elementos de línea**
-  Son pequeñas estructuras que representan o describen pequeños trozos de texto o datos. Pueden contener solo texto u otros elementos de línea. 
+  Son pequeñas estructuras que representan o describen pequeños trozos de texto o datos.
   Ejemplos de elementos de línea los hipervínculos, las citas o las imágenes:<br>
   ```<em> (énfasis/cursiva), <strong> (fuerte énfasis/negrita), <q> (citas cortas), <span> (rango), <cite>, <abbr>, <code>```
 
@@ -167,8 +167,6 @@ Las etiquetas HTML normalmente vienen en pares, con una etiqueta de apertura y u
 Algunas etiquetas, conocidas como etiquetas vacías, no tienen una etiqueta de cierre, como ```<img>, <br> y <input>.```
 
 Las etiquetas HTML deben anidarse correctamente. Por ejemplo, si una etiqueta ```<b>``` se abre dentro de una etiqueta ```<p>``` debe cerrarse antes de que se cierre la etiqueta ```<p>```.
-
-Los atributos de las etiquetas espeçifiçen en etiqueta de apertura y suelen tener el formato. Por ejemplo, en ```<img src="imagen.jpg">```, src especifica la ruta de la imagen.
 
 ## Legibilidad y organización de código
 
@@ -229,10 +227,10 @@ En HTML, cuando necesitamos enlazar a otros archivos, ya sean documentos HTML, h
 - **Imagenes**<br>
   Las imagenes son un recurso son un recurso muy utilizados en el desarrollo web. Ademas de hacer ,as atractiva nuestra aplicación, nos permite proporcionar información de manera visual.<br><br>
   Usamos el atributo src para indicar dónde está ubicada la imagen:<br>
-  Podemos poner una URL externa o la ruta del archivo si tenemos la imagen localmente. También utilizaremos eI atributo alt para poner un texto alternativo que se mostrará en el caso de que el navegador no pueda mostrar o acceder a nuestra imagen.
+  Podemos poner una URL externa o la ruta del archivo si tenemos la imagen localmente.
 
 - **Enlaces (```<a>```)**<br>
-  El éxito de la WWW (World Wide Web) es la capacidad de sallar de un documento a otro mediante enlaces. El sistema que nos permite esta navegacion se llama hipertexto. La etiqueta HTML para crear estos enlaces es ```<a>```. Es una etiqueta de línea, ya que podemos colocar enlaces rodeados de texto.
+  El éxito de la **WWW (World Wide Web)** es la capacidad de sallar de un documento a otro mediante enlaces. El sistema que nos permite esta navegacion se llama **hipertexto**. La etiqueta HTML para crear estos enlaces es ```<a>```. Es una etiqueta de línea, ya que podemos colocar enlaces rodeados de texto.
 
 - **Enlaces a páginas externas**<br>
   Si queremos hacer un enlace a una página externa a nuestra aplicación web, como por ejemplo para enlazar al sitio web https://m.joan23.fje.edu/, pero el texto que queremos que aparezca en el navegador es implemente "Jesuïtes Bellvitge — Joan XXIII". EI código que debemos introducir es el siguiente: ```<p><a href="https://m.joan23.fje.edu/" title="Joan XXIII">Jesuïtes Bellvitge — Joan XXIII</a></p>```
@@ -255,11 +253,11 @@ En HTML, cuando necesitamos enlazar a otros archivos, ya sean documentos HTML, h
   - ```<<ul type=circle>```<br>
 
   Las listas ordenadas son aquellas en las que el orden sí es relevante, como en una receta. Estas son encerradas en un elemento ```<ol> (ordered list)```. Se puede escoger el tipo al enumerar una lista, por defecto es numérica y las otras opciones disponibles son:
-  - ```<ol type=A>```
-  - ```<ol type=a>```
-  - ```<ol type=l>```
-  - ```<ol type=i start=10>```
-  - ```<ol type=l>```
+  - ```<ol type=A>```<br>
+  - ```<ol type=a>```<br>
+  - ```<ol type=l>```<br>
+  - ```<ol type=i start=10>```<br>
+  - ```<ol type=l>```<br>
   
   Añadiendo el parámetro start=n se fuerza la numeración a partir de un determinado valor. 
   
@@ -274,36 +272,96 @@ El **HTML SEMÁNTICO consique en describir el contenido dándole un significado 
 
 ## Formularios
 
+Los formularios nos sirven para que el usuario pueda interactuar y tambien pueda tranbsmitirnos información y esta información se puede procesar de la manera que necesite la aplicacion web. <br><br> 
 
+Y tenemos varios tipos de control que serian:
+
+  - Campos de texto<br>
+  - Campos de contraseña<br>
+  - botones de opción (radio buttons)<br>
+  - casillas de verificación (checkbox)<br>
+  - campos para introducir archivos<br>
+  - listas de selección<br>
+  - áreas de texto<br>
+  - Botones<br>
+
+**Todos los controles de un formulario tiene que tener un atributo llamado "name" que servira para poder identificar el dato que queramos enviar**
 
 ## Etiquetas de formularios (form)
 
+Sirve para crear un formulario y tiene unos atributos en comun que son los siguientes:
 
+- action: Define la url donde se enviara los datos del formulari para processar esa información.<br>
+- method: Especifica el metodo en el que se enviaran los datos<br>
+- Enctype: Sirve para definir como se van a codificar los datos antes de que se envien al servidor. Normalmente se usa para cuando se suben archivos.<br>
+- Target: Indica donde se tiene que mostrar la resupuesta al enviar el formulario:<br>
+  - _self (por defecto): La respuesta se carga en la misma ventana<br>
+  - _blank: Abre la respuesta en una nueva pestaña/ventana<br>
 
 ## Etiquetas de formularios (input)
 
+Sirve para crear distintos tipos de campos interactivos y tiene unos atributos en comun que son los siguientes:
 
+- type: define el tipo de entrada que debe mostrar.<br>
+  ![Ejemplos](ejemplos.png "Ejemplos")<br><br>
+- id: Identificador para un campo único, se puede usar para asociar el ```<label>``` con el campo de entrada.<br>
+- name: Nombre de un dato de entrada que se utilize al enviar el formulario.<br>
+- value: es el nombre del campo de entrada que se utiliza para enviar el formulario para identificar ese dato.<br>
+- placeholder: Es el texto que aparece en el type en el que se escribe cuando no hay nada escrito.<br>
+- required: Señala que campo se tiene que completar para poder enviar el formulario.<br>
+- disabled: Lo que hace es desactivar el campo en el que lo hayamos escrito para que el usuario no pueda hacer nada. <br>
+- redonly: Hace que en el campo en el que lo hayamos puesto solo sea de lectura.<br>
+
+## Etiquetas de formularios (input type radio y checkbox)
+
+- ```<input type radio>```: Lo que hace es agruparse con otros de mismo nombre<br>
+- ```<input type='checkbox'>```: Lo que hace es permitir selecciones multiples<br>
 
 ## Etiquetas de formularios (textarea)
 
+Sirve para crear un area para que el usuario pueda escribir multiples lineas de texto y tiene unos atributos en comun que son los siguientes:
 
+- name: Especifica el nombre del control que se usara al enviar el formulario.<br>
+- id: Identificador para un campo único, se puede usar para asociar el ```<label>``` con el area de texto.<br>
+- rows: Define las lineas de texto visible y la altura de la caja de texto.<br>
+- cols: Define el numero de caracteres visibles y especifica el ancho de la caja.<br>
+- placeholder: Es el texto que aparece en el type en el que se escribe cuando no hay nada escrito.<br>
+- required: Señala que campo se tiene que completar para poder enviar el formulario.<br>
+- redonly: Hace que en el campo en el que lo hayamos puesto solo sea de lectura.<br>
+- disabled: Lo que hace es desactivar el campo en el que lo hayamos escrito para que el usuario no pueda hacer nada. <br>
 
-## Etiquetas de formularios (label)
+## Etiquetas de formularios (lable)
 
+Su usa para proporcionar una etiqueta / descripcion a un elemento y tiene unos atributos en comun que son los siguientes:
 
+- for: Especifica el elemento que esta asociado con ```<label>```. Tiene que coincidir con ele elemento ```id``` correspondiente.<br>
+- form:Permite asociar la etiqueta con un formulario en especifico (se usa cuando hay varios formularios en la misma pagina).<br>
 
 ## Etiquetas de formularios (select)
 
+Sirve para crear menus desplegables y tiene unos atributos en comun que son los siguientes:
 
-
-## Etiquetas de formularios (select)
-
-
+- name: Especifica el nombre del control que se usara al enviar el formulario.<br>
+- id: Identificador para un campo único, se puede usar para asociar el ```<label>``` con el menu desplegable.<br>
+- size: sirve para definir el numero de opciones visibles en el desplegable.<br>
+- multiple: Sirve para poder seleccionar mas de una opcion.<br>
+- value: Indica el valor de la opción.<br>
 
 ## Etiquetas de formularios (fieldset/legend)
 
+Sirve para agrupar varios elementos del formulario en un conjunto logico y esto sirve para mejorar la estructura del formulario. y tiene unos atributos en comun que son los siguientes:
 
+- name: Proporciona nombre al grupo de un campo si es necesario. <br>
+- disabled: Desactiva todo los controles dentro del ```<fieldset>``` lo que hace que no puedas interactuar ni enviar.<br>
+- form: Lo que hace es asocia ```<fieldset>``` con con un formulario en especifico si esta fuera del ```<form>```.<br>
 
 ## Etiquetas de formularios (button)
 
+Funciona para crear diferentes botones interactivos para el formulario y tiene unos atributos en comun que son los siguientes:
 
+- type: Es el que define el tipo de boton que sera. Los tipos de los botones son los siguientes:
+  - submit: Sirve pata enviar el formulario
+  - reset: Sirve para reiniciar todo el contenido que hay en el formulario.
+  - name: Sirve para definir un nombre al boton en el que sera enviado con datos del formulario.
+  - value: Especifica el valor que envia al servidor en caso de que el boton sea **submit**
+  - disabled: Sirve para desactivar el boton y que el usuario no pueda interactuar con el.
