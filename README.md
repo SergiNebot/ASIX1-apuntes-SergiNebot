@@ -103,7 +103,7 @@ Ejemplo:
 |**DAW2** | curso 2425 | 32 |
 
 
-# Capitulo 2 ```HTML```
+# Capitulo 3 ```HTML```
 
 ## Introducción HTML
 
