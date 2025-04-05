@@ -24,12 +24,13 @@ git push origin main
 ```
 
 # Capitulo 2 ```Markdown```
+```
 ## Segundo nivel de encabezado
 ### Tercer nivel de encabezado
 #### Cuarto nivel de encabezado
 ###### Quinto nivel de encabezado
 ###### Sexto nivel de encabezado
-Apuntes para **lenguaje de marcas**
+```
 
 Las etiquetas en **_markdown_** y **_HTML_** pueden anidarse
 El "#" genera encabezados
@@ -82,6 +83,8 @@ Tendremos que colocar el codigo dentro de ``` y luego volver a cerrarlo con lo m
 ```
 
 ### Como poner un link
+Para poner un link tendremos que colocarlo como el siguiente ejemplo:
+
 ```
 [TextoClicable](URL "Titulo Opcional")
 ```
@@ -96,12 +99,23 @@ Ejemplo:
 ![horario](horario.png "horario")
 
 ### Tablas
+Para hacer una tabla tenemos que poner los titulos entre ```||```, para justificar el texto tendremos que poner:
+- |----------| : Sirve para 
+- |:--------------:| :
+- |--------------:| :
+```
 | Titulo 1 | Titulo 2 | Titulo 3 |
 |----------|:--------------:|--------------:|
 | **SMX2** | Curso 2324 | 25 |
 | **ASIX1** | curso 2425 | 33 |
 |**DAW2** | curso 2425 | 32 |
+```
 
+| Titulo 1 | Titulo 2 | Titulo 3 |
+|----------|:--------------:|--------------:|
+| **SMX2** | Curso 2324 | 25 |
+| **ASIX1** | curso 2425 | 33 |
+|**DAW2** | curso 2425 | 32 |
 
 # Capitulo 3 ```HTML```
 
@@ -141,6 +155,12 @@ Los atributos siempre incluyen en la etiqueta de apertura de un elemento y deben
   
 - Comillas de apertura y de cierre, encerrando el valor del atributo.
   
+## Validacion en HTML
+
+La **validacion de HTML** es un proceso para verificar que el codigo HTML cumple con los requisitos establecidos por el **World Wide Web Constrium (W3C)**, tambien ayuda a correguir errores que pueden causar problemas en la visualización en diferentes navegadores.
+
+Para realizar la validación tendremos que copiar nuestro codigo html y pegarlo en el validador o tambien se puede hacer subiendo directamente el archivo.
+
 ## Estructura basica de un fichero HTML
 
 Una página HTML incluye una declaración DOCTYPE, un elemento html, y dentro de este, un head y un body.
@@ -364,3 +384,5 @@ Funciona para crear diferentes botones interactivos para el formulario y tiene u
   - name: Sirve para definir un nombre al boton en el que sera enviado con datos del formulario.
   - value: Especifica el valor que envia al servidor en caso de que el boton sea **submit**
   - disabled: Sirve para desactivar el boton y que el usuario no pueda interactuar con el.
+
+## 
