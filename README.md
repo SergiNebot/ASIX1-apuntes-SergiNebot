@@ -489,40 +489,37 @@ El css se pueden colocar en tres ubicaciones diferentes:
   - Inline styles (atributo style en HTML):
   - Especificidad = 1000.
   - Ejemplo: ``<div style="color: red;">`` 
-  <br>
 
   - Selectores de ID (#id):
   - Especificidad = 100.
   - Ejemplo: ``#header``.
-  <br>
+
 
   - Selectores de clase, atributos y pseudoclases (.class, [attr=value], :hover): 
   - Especificidad = 10.
   - Ejemplo: ``.main, [type="text"], :focus``.
-  <br>
+
 
   - Selectores de elementos y pseudoelementos (h1, p. ::before):
   - Especificidad = 1.
   - Ejemplo: ``h1, p.``
-  <br>
+
 
   - Universal selector ("), combinadores (+, >,-)y pseudo-clases universales
   (:is, not) no suman especificidad por sí mismos.
-  <br>
+
   Ejemplo práctico:
   - h1 → Especificidad = 1
   - .box → Especificidad = 10
   - #main → Especificidad = 100
   - #main.box h1 → Especificidad = 111
-  <br>
 
   Reglas Importantes:
   Una regla con `` !important `` sobrescribe cualquier otra regla, da igual la especificidad.
-  <br>
-  ## Estructura
+
+## Estructura
   Una hoja de estilos es un conjunto de reglas para definir la estética de los documentos (X)HTML. Cada regla está formada por un selector y un conjunto de declaraciones. A su vez, una  declaración está formada por una propiedad y su valor asociado.
-  
-  <br>
+
 
   Un selector nos sirve para definir a qué le queremos aplicar las declaraciones de esa regla.
   
@@ -539,14 +536,14 @@ El css se pueden colocar en tres ubicaciones diferentes:
   <br>
   <br>
 
-  ## Comentarios
+## Comentarios
   Como en HTML tambien se pueden agregar comentarios al codigo de la siguiente forma:
   ```
   /* Asi se comenta en css */
   ```
   <br>
 
-  ## Agrupar selectores
+## Agrupar selectores
   Para no repetir informacion, podemos agrupar las declaraciones de estilo que quyeremos aplicar a diferentes selectores. Por ejemplo podriamos aplicar el mismo estilo a p y a h3, se podria hacer de la siguiente forma:
 
   ```
@@ -556,7 +553,7 @@ El css se pueden colocar en tres ubicaciones diferentes:
   }
   ```
 
-  ## Tipos de selectores
+## Tipos de selectores
 
   Hay diferentes selectores, cada uno corresponde con una parte diferente, los mas basicos son:
   - selector elementos (selector de tipo)
@@ -572,9 +569,9 @@ El css se pueden colocar en tres ubicaciones diferentes:
   - pseudoclase
   - pseudoelementos
   
-  ## Tipos de selectores basicos
+## Tipos de selectores basicos
   
-  ### Selector de elementos
+### Selector de elementos
   Corresponde con todos los elementos de este nombre de la página.
 
   Ejemplo:
@@ -585,7 +582,7 @@ El css se pueden colocar en tres ubicaciones diferentes:
 ```
   Este ejemplo solo **afectaria a la etiqueta h1**
 
-  ### Selector de id
+### Selector de id
 
   Corresponde a todos los elementos que tienen un atributo id con el mismo valor en especifico que tenga el css.
 
@@ -599,7 +596,7 @@ El css se pueden colocar en tres ubicaciones diferentes:
 
   En este caso afecta al h1 porque tiene el id del estilo que he añadido.
 
-  ### Selector de classe
+### Selector de classe
 
   Es parecido al de id pero cambiando el parametro de ``id="nombre_id"`` por el ``class="nombre_clase"`` y tambien el ``#`` por el ``.`` en la hoja de estilos.
 
@@ -612,7 +609,7 @@ El css se pueden colocar en tres ubicaciones diferentes:
   ``<h1 class="centrado">Hola</h1>``
 
 ## Tipos de selectores avanzados
-  ### selector universal
+### selector universal
   Sirven para seleccionar todos los elementos de la pagina.
 
   Ejemplo: 
@@ -623,7 +620,7 @@ El css se pueden colocar en tres ubicaciones diferentes:
   }
   ```
 
-  ### selector de atributos
+### selector de atributos
   Permiten seleccionar elementos en funcion de los atributos que contienen.
 
   Ejemplo:
@@ -634,7 +631,7 @@ El css se pueden colocar en tres ubicaciones diferentes:
   ```
   Este ejemplo solo afecta a las imagenes que tienen un atributo "alt".
 
-  ### Selectores de hijos
+### Selectores de hijos
   Sirven para seleccionar elementos concretos que son hijos directos de otros elementos.
 
   Ejemplo:
@@ -647,7 +644,7 @@ El css se pueden colocar en tres ubicaciones diferentes:
 
   Lo que hace esto es que los strong que estan dentro de los h3 se les aplicara ese estilo.
 
-  ### Selectores descendientes
+### Selectores descendientes
 
   Es parecido al selector de hijos pero, la diferencia entre estos es solo que solo selecciona a los elementos descendientes directos.
 
@@ -660,7 +657,7 @@ El css se pueden colocar en tres ubicaciones diferentes:
 
   esto afectara directamente al strong que se encuentre dentro de un h3.
 
-  ### selectores de hermanos adyacentes
+### selectores de hermanos adyacentes
   Permiten seleccionar un elemento concreto que aparece directamente despues de otro elemento concreto.
 
   Ejemplo:
@@ -677,14 +674,14 @@ El css se pueden colocar en tres ubicaciones diferentes:
   ```
   En este ejemplo afectaria al h1 y al primer h2 que va despues de un h1.
 
-  ### pseudoclase
+### pseudoclase
   Se utilizan para definir los diversos estados de los elementos.Uno de los usos mas frecuentes es aplicar estilos a los estados de los enlaces. Estas son las diferentes psudoclases:
   - :link: El estado normal por defecto de los enlaces.
   - :visited: Enlaces que ya se han visitado.
   - :focus: Enlaces (o campos de formularios, o cualquier otra cosa) que tienen cursor en su interior.
   - :hover: Enlaces que tienen el puntero del ratón sobre ellos.
 
-  ### pseudoelementos
+### pseudoelementos
   No afectan a todo el elemento, sino que permiten añadir estilos a una parte concreta del elemento.
 
   Ejemplo:
@@ -697,10 +694,10 @@ El css se pueden colocar en tres ubicaciones diferentes:
   En el ejemplo el  ``::first-line`` selecciona solo la primera línea del elemento especificado por el selector.
   <br>
   
-  ## Display Flex
+## Display Flex
   **Flex (también llamado flexbox)** es un sistema de **elementos flexibles** en la que los **elementos HTML** se adaptan y colocan automáticamente y es más fácil personalizar los diseños de una página web.
 
-  ### Composición
+### Composición
 
   ![Estructura_flex](Estructura_flex.png "Estructura_flex")
 
@@ -712,21 +709,21 @@ El css se pueden colocar en tres ubicaciones diferentes:
 
   Item: Cada uno de los hijos tendrá el contenedor en su interior.
 
-  # Capitulo 5 ```Responsive```
+# Capitulo 5 ```Responsive```
 
   El diseño responsive es una técnica de diseño web que permite que el sitio web se adapte automáticamente a diferentes tamaños de pantalla y dispositivos.
 
-  ## Caracteristicas principales
+## Caracteristicas principales
 
   - Flexible y adaptable: El diseño y tamaño se ajustan al dispositivo.
   - Media queries: Se usa para aplicar estilos especificos segun el al ancho y alto de la pantalla del dispositivo.
   - Rejillas fluidas: Los tamaños de los contenedores se basan en porcentajes de valores fijos.
   - Imagenes y fuentes escalables: Se ajustan para mantener la proposicion y legibilidad en diferentes dispositivos.
   
-  ## Media queries
+## Media queries
   Las media queries son una característica de CSS que permite aplicar estilos diferentes a una página web según las características del dispositivo o la ventana del navegador.
 
-  ### Como funciona
+### Como funciona
   - Detectan caracteristicas del dispoitivo: Por ejemplo el ancho de banda, la altura, si el dispositivo donde estamos viendo la pagina esta en modo vertical, modo horizontal, etc....
   
   - Aplican estilos condicionales: Aplican estilos condicionales: Los estilos dentro de una media query solo se activan si la condición especificada se cumple.
@@ -747,7 +744,7 @@ El css se pueden colocar en tres ubicaciones diferentes:
   }
   ```
 
-  ### Posibilidades
+### Posibilidades
 
   Se pueden definir las características para determinar las resoluciones y anchos de pantalla.
 
