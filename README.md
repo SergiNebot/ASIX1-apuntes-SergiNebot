@@ -1,5 +1,5 @@
 # ASIX1-apuntes-SergiNebot
-# Capitulo 1 ``GitHub``
+# Capitulo 1 ```GitHub```
 
 ## Que es ``Github?``
 Es un Sistema de control de versiones, que nos ayuda a llevar un historial completo de modificaciónes y avances que realizamos en proyectos.
@@ -385,7 +385,7 @@ Funciona para crear diferentes botones interactivos para el formulario y tiene u
   - value: Especifica el valor que envia al servidor en caso de que el boton sea **submit**
   - disabled: Sirve para desactivar el boton y que el usuario no pueda interactuar con el.
 
-# CSS
+# Capitulo 4 ```CSS```
 ## Evolucion y funcion
 Al principio de las paginas web, el HTML era muy sencillo, facil de aprender y no era capaz de representar recursos graficos para añadir a la información textual.
 
@@ -578,11 +578,11 @@ El css se pueden colocar en tres ubicaciones diferentes:
   Corresponde con todos los elementos de este nombre de la página.
 
   Ejemplo:
-
+```
   h1 {
     background-color: green;
   }
-
+```
   Este ejemplo solo **afectaria a la etiqueta h1**
 
   ### Selector de id
@@ -590,11 +590,11 @@ El css se pueden colocar en tres ubicaciones diferentes:
   Corresponde a todos los elementos que tienen un atributo id con el mismo valor en especifico que tenga el css.
 
   Ejemplo:
-
+```
   #centrado {
     text-align: center;
   }
-
+```
   ``<h1 id="centrado">Hola</h1>``
 
   En este caso afecta al h1 porque tiene el id del estilo que he añadido.
@@ -604,11 +604,11 @@ El css se pueden colocar en tres ubicaciones diferentes:
   Es parecido al de id pero cambiando el parametro de ``id="nombre_id"`` por el ``class="nombre_clase"`` y tambien el ``#`` por el ``.`` en la hoja de estilos.
 
   Ejemplo:
-
+```
   .centrado {
     text-align: center;
   }
-
+```
   ``<h1 class="centrado">Hola</h1>``
 
 ## Tipos de selectores avanzados
@@ -694,6 +694,7 @@ El css se pueden colocar en tres ubicaciones diferentes:
       color:red;
   }
   ```
+  En el ejemplo el  ``::first-line`` selecciona solo la primera línea del elemento especificado por el selector.
   <br>
   
   ## Display Flex
@@ -711,4 +712,75 @@ El css se pueden colocar en tres ubicaciones diferentes:
 
   Item: Cada uno de los hijos tendrá el contenedor en su interior.
 
-  # Responsive
+  # Capitulo 5 ```Responsive```
+
+  El diseño responsive es una técnica de diseño web que permite que el sitio web se adapte automáticamente a diferentes tamaños de pantalla y dispositivos.
+
+  ## Caracteristicas principales
+
+  - Flexible y adaptable: El diseño y tamaño se ajustan al dispositivo.
+  - Media queries: Se usa para aplicar estilos especificos segun el al ancho y alto de la pantalla del dispositivo.
+  - Rejillas fluidas: Los tamaños de los contenedores se basan en porcentajes de valores fijos.
+  - Imagenes y fuentes escalables: Se ajustan para mantener la proposicion y legibilidad en diferentes dispositivos.
+  
+  ## Media queries
+  Las media queries son una característica de CSS que permite aplicar estilos diferentes a una página web según las características del dispositivo o la ventana del navegador.
+
+  ### Como funciona
+  - Detectan caracteristicas del dispoitivo: Por ejemplo el ancho de banda, la altura, si el dispositivo donde estamos viendo la pagina esta en modo vertical, modo horizontal, etc....
+  
+  - Aplican estilos condicionales: Aplican estilos condicionales: Los estilos dentro de una media query solo se activan si la condición especificada se cumple.
+  
+  Un ejemplo de una media query:
+
+  ```
+  @media (max-width: 768px) {
+      body{
+        background-color:green;
+      }
+  }
+
+  @media (max-width: 480px) {
+      body{
+        background-color:yellow;
+      }
+  }
+  ```
+
+  ### Posibilidades
+
+  Se pueden definir las características para determinar las resoluciones y anchos de pantalla.
+
+  Ejemplo:
+
+  ```
+  /* Pantalla con orientacion horizontal */
+  @media (orientation: landscape) {
+  / * CSS que queramos */
+  }
+
+  @media only screen and (min-width: 32epx) and (max-width:480px){
+  / * CSS que queramos * /
+  }
+
+  ```
+
+  Algunos de los parámetros que se pueden utilizar al hacer condiciones son:
+
+  - width: anchurade la ventana del navegador.
+  
+  - height: altura de la ventana del navegador.
+  
+  - device-width: anchira de la resolucion de la pantalla.
+  
+  - device-height: altura de la resolucion de pantalla.
+  
+  - orientation(portrait/landscape): dispositivo en horizontal o en vertical.
+  
+  - resolution: densidad de pixeles.
+  
+  Excepto la orientacion, el resto de parametros admiten los valores "max" y "min"
+  
+  - max-width: La anchura será menor que la indicada.
+  
+  - min-width: La anchura será mayor que la indicada.
