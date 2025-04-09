@@ -378,11 +378,102 @@ Sirve para agrupar varios elementos del formulario en un conjunto logico y esto 
 
 Funciona para crear diferentes botones interactivos para el formulario y tiene unos atributos en comun que son los siguientes:
 
-- type: Es el que define el tipo de boton que sera. Los tipos de los botones son los siguientes:
+  - type: Es el que define el tipo de boton que sera. Los tipos de los botones son los siguientes:
   - submit: Sirve pata enviar el formulario
   - reset: Sirve para reiniciar todo el contenido que hay en el formulario.
   - name: Sirve para definir un nombre al boton en el que sera enviado con datos del formulario.
   - value: Especifica el valor que envia al servidor en caso de que el boton sea **submit**
   - disabled: Sirve para desactivar el boton y que el usuario no pueda interactuar con el.
 
-## 
+# CSS
+## Evolucion y funcion
+Al principio de las paginas web, el HTML era muy sencillo, facil de aprender y no era capaz de representar recursos graficos para añadir a la información textual.
+
+Para evitar que el HTML fuese el responsable de la parte estética y visual, se idearon las hojas de estilo y el lenguaje **CSS (Cascading Style sheets)**.
+
+Mientras que HTML estructura el documento e indica a los navegadores la función de un elemento en concreto (**un vínculo, un título,texto, etc...**) el CSS da instrucciones al navegador sobre como ha de mostrar un elemento concreto: estilo, espaciado, posición....
+
+Lo que ahora conocemos como CSS apareció cuando el W3C recibió 9 propuestas diferentes para hojas de estilo, de las cuales seleccionó dos: **Cascading HTML Style Sheets (CHSS),propuesta por Hákon Wium Lie en 1994, y Stream-based Style Sheet Proposal (SSP)**.
+
+Actualmente se está trabajando con **CSS3**.
+
+
+![Evolucion](evolucion_css_y_w3c.png "Evolucion")
+
+## Ventajas e inconvenientes
+
+Las ventajas de usar el css son las siguientes:
+  - Tener una posibilidad de mantener el codigo mas facilmente.
+  - A nivel de diseño, el css es mas potente que la etiqueta de diseño de HTML.
+  - El CSS es un lenguaje sencillo.
+  - Se puede definir en diferentes hojas de estilo para un solo documento y asi tenerlo mejor organizado.
+  - Se pueden reutilizar desde diferentes documentos HTML.
+
+El inconveniente que tiene el CSS es que no todos los navegadores se comportan de la misma forma con la hoja de estilos de nuestra pagina html por los estandares establecidos en cada navegador.
+
+## Ubicacion
+
+El css se pueden colocar en tres ubicaciones diferentes:
+
+  - Estilo Inline (en la propia etiqueta).
+  - Estilo Interno (en la cabecera del documento HTML).
+  - Estilo Externo (en un documento externo).
+  
+### Inline
+
+  En la propia etiqueta se añaden las propiedades del css directamente usando el atributo "style"
+
+  Ejemplo:
+
+  ```
+  <p style="text-align:center; color:green">Listo</p>
+  ```
+  El ejemplo se mostraria de esta forma:
+
+  ![Ejemplo_css](ejemplo_css.png "Ejemplo_css")
+
+### Interno
+   
+  Dentro del ``<head>`` se añade un ``<style>`` con el css que quieras añadir.
+
+  Ejemplo:
+
+  ````
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Ejemplo</title>
+      <style>
+          p {
+              text-align: center;
+              color: green;
+          }
+      </style>
+  </head>
+  <body>
+      <p>Listo</p>
+      <p>Hola</p>
+      <p>prbando</p>
+  </body>
+  </html>
+  ````
+
+  Resultado del ejemplo:
+  
+  ![Ejemplo_css_2](ejemplo_css_2.png "Ejemplo_css_2")
+
+### Externo
+  
+  En externo lo que tendriamos que hacer seria crear un documento aparte y linkear la hoja de estilos al documento donde queramos aplicar ese diseño.
+
+  Ejemplo:
+ 
+  ![Ejemplo_link_css_html](ejemplo_link_css_html.png "Ejemplo_link_css_html")
+
+  ![Ejemplo_css](css.png "Ejemplo_css")
+
+  Resultado del ejemplo:
+  
+  ![Muestra_ejemplo_link_css](muestra_ejemplo_link_css.png "Muestra_ejemplo_link_css")
