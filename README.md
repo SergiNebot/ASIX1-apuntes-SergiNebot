@@ -438,7 +438,7 @@ El css se pueden colocar en tres ubicaciones diferentes:
 
   Ejemplo:
 
-  ````
+  ```
   <!DOCTYPE html>
   <html lang="es">
   <head>
@@ -458,7 +458,7 @@ El css se pueden colocar en tres ubicaciones diferentes:
       <p>prbando</p>
   </body>
   </html>
-  ````
+  ```
 
   Resultado del ejemplo:
   
@@ -475,5 +475,228 @@ El css se pueden colocar en tres ubicaciones diferentes:
   ![Ejemplo_css](css.png "Ejemplo_css")
 
   Resultado del ejemplo:
-  
+
   ![Muestra_ejemplo_link_css](muestra_ejemplo_link_css.png "Muestra_ejemplo_link_css")
+
+## Prioridad
+
+  - Primero se comprueba si existe una hoja de estilos externa asociada al documento. Si no se encuentra no se aplicara ningun estilo-
+  - Segundo, si hay alguna definicion de estilos en el head del documento (interno). si hay alguna definicion que contradice a la definida en la hoja de estilos externa, esta tendra prioridad (interna)
+  - Por ultimo, si hay aluna definicion inline en el documento html, en caso de contradeciccion tendra prioridad el estilo inline.
+
+  La especifidad se calcula en funcion de un sistema de puntuacion basado en las partes del selector:
+
+  - Inline styles (atributo style en HTML):
+  - Especificidad = 1000.
+  - Ejemplo: ``<div style="color: red;">`` 
+  <br>
+
+  - Selectores de ID (#id):
+  - Especificidad = 100.
+  - Ejemplo: ``#header``.
+  <br>
+
+  - Selectores de clase, atributos y pseudoclases (.class, [attr=value], :hover): 
+  - Especificidad = 10.
+  - Ejemplo: ``.main, [type="text"], :focus``.
+  <br>
+
+  - Selectores de elementos y pseudoelementos (h1, p. ::before):
+  - Especificidad = 1.
+  - Ejemplo: ``h1, p.``
+  <br>
+
+  - Universal selector ("), combinadores (+, >,-)y pseudo-clases universales
+  (:is, not) no suman especificidad por sí mismos.
+  <br>
+  Ejemplo práctico:
+  - h1 → Especificidad = 1
+  - .box → Especificidad = 10
+  - #main → Especificidad = 100
+  - #main.box h1 → Especificidad = 111
+  <br>
+
+  Reglas Importantes:
+  Una regla con `` !important `` sobrescribe cualquier otra regla, da igual la especificidad.
+  <br>
+  ## Estructura
+  Una hoja de estilos es un conjunto de reglas para definir la estética de los documentos (X)HTML. Cada regla está formada por un selector y un conjunto de declaraciones. A su vez, una  declaración está formada por una propiedad y su valor asociado.
+  
+  <br>
+
+  Un selector nos sirve para definir a qué le queremos aplicar las declaraciones de esa regla.
+  
+  Ejemplo:
+
+  ```
+  p{
+      font-size: 10pt;
+      background-color:gray;
+  }
+  ```
+
+  En este ejemplo **p** es el selector, que tiene **dos declaraciones** con la estructura **propiedad: valor**;
+  <br>
+  <br>
+
+  ## Comentarios
+  Como en HTML tambien se pueden agregar comentarios al codigo de la siguiente forma:
+  ```
+  /* Asi se comenta en css */
+  ```
+  <br>
+
+  ## Agrupar selectores
+  Para no repetir informacion, podemos agrupar las declaraciones de estilo que quyeremos aplicar a diferentes selectores. Por ejemplo podriamos aplicar el mismo estilo a p y a h3, se podria hacer de la siguiente forma:
+
+  ```
+  p,h2{
+    color: red;
+    background-color:gray;
+  }
+  ```
+
+  ## Tipos de selectores
+
+  Hay diferentes selectores, cada uno corresponde con una parte diferente, los mas basicos son:
+  - selector elementos (selector de tipo)
+  - selector de id
+  - selector de clase
+  
+  y los selectores avanzados son:
+  - selector universal
+  - selector de atributos
+  - selector de hijos
+  - selector de descendientes
+  - selectores de hermanos adyacentes
+  - pseudoclase
+  - pseudoelementos
+  
+  ## Tipos de selectores basicos
+  
+  ### Selector de elementos
+  Corresponde con todos los elementos de este nombre de la página.
+
+  Ejemplo:
+
+  h1 {
+    background-color: green;
+  }
+
+  Este ejemplo solo **afectaria a la etiqueta h1**
+
+  ### Selector de id
+
+  Corresponde a todos los elementos que tienen un atributo id con el mismo valor en especifico que tenga el css.
+
+  Ejemplo:
+
+  #centrado {
+    text-align: center;
+  }
+
+  ``<h1 id="centrado">Hola</h1>``
+
+  En este caso afecta al h1 porque tiene el id del estilo que he añadido.
+
+  ### Selector de classe
+
+  Es parecido al de id pero cambiando el parametro de ``id="nombre_id"`` por el ``class="nombre_clase"`` y tambien el ``#`` por el ``.`` en la hoja de estilos.
+
+  Ejemplo:
+
+  .centrado {
+    text-align: center;
+  }
+
+  ``<h1 class="centrado">Hola</h1>``
+
+## Tipos de selectores avanzados
+  ### selector universal
+  Sirven para seleccionar todos los elementos de la pagina.
+
+  Ejemplo: 
+  
+  ```
+  *{
+    border: 1px solid black;
+  }
+  ```
+
+  ### selector de atributos
+  Permiten seleccionar elementos en funcion de los atributos que contienen.
+
+  Ejemplo:
+  ```
+  img[alt]{
+    border: 1px solid black;
+  }
+  ```
+  Este ejemplo solo afecta a las imagenes que tienen un atributo "alt".
+
+  ### Selectores de hijos
+  Sirven para seleccionar elementos concretos que son hijos directos de otros elementos.
+
+  Ejemplo:
+
+  ```
+  h3>strong{
+    color: blue;
+  }
+  ```
+
+  Lo que hace esto es que los strong que estan dentro de los h3 se les aplicara ese estilo.
+
+  ### Selectores descendientes
+
+  Es parecido al selector de hijos pero, la diferencia entre estos es solo que solo selecciona a los elementos descendientes directos.
+
+  Ejemplo:
+  ```
+  h3 strong{
+    color: blue;
+  }
+  ```
+
+  esto afectara directamente al strong que se encuentre dentro de un h3.
+
+  ### selectores de hermanos adyacentes
+  Permiten seleccionar un elemento concreto que aparece directamente despues de otro elemento concreto.
+
+  Ejemplo:
+
+  ```
+  <h1>Encabezado1</h1>
+  <h2>Encabezado2 (hermano adyacente) </h2>
+  <h2>Encabezado2 (hermano no adyacente) </h2>
+
+  Definiríamos la regla siguiente:
+  h1+h2 {
+  margin-top: -5mm;
+  }
+  ```
+  En este ejemplo afectaria al h1 y al primer h2 que va despues de un h1.
+
+  ### pseudoclase
+  Se utilizan para definir los diversos estados de los elementos.Uno de los usos mas frecuentes es aplicar estilos a los estados de los enlaces. Estas son las diferentes psudoclases:
+  - :link: El estado normal por defecto de los enlaces.
+  - :visited: Enlaces que ya se han visitado.
+  - :focus: Enlaces (o campos de formularios, o cualquier otra cosa) que tienen cursor en su interior.
+  - :hover: Enlaces que tienen el puntero del ratón sobre ellos.
+
+  ### pseudoelementos
+  No afectan a todo el elemento, sino que permiten añadir estilos a una parte concreta del elemento.
+
+  Ejemplo:
+  
+  ```
+  p::first-line {
+      color:red;
+  }
+  ```
+  <br>
+  
+  #### Display Flex
+  **Flex (también llamado flexbox)** es un sistema de **elementos flexibles** en la que los **elementos HTML** se adaptan y colocan automáticamente y es más fácil personalizar los diseños de una página web.
+
+  
