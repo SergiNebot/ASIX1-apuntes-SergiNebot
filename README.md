@@ -696,7 +696,19 @@ El css se pueden colocar en tres ubicaciones diferentes:
   ```
   <br>
   
-  #### Display Flex
+  ## Display Flex
   **Flex (también llamado flexbox)** es un sistema de **elementos flexibles** en la que los **elementos HTML** se adaptan y colocan automáticamente y es más fácil personalizar los diseños de una página web.
 
-  
+  ### Composición
+
+  ![Estructura_flex](Estructura_flex.png "Estructura_flex")
+
+  Contenedor: Elemento padre que tendrá en su interior cada uno de los ítems flexibles.
+
+  Eje principal: Los contenedores flexibles tendrán una orientación principal específica.
+
+  Eje secundario: Igualmente, los contenedores flexibles tendrán una orientación secundaria, perpendicular a la principal.
+
+  Item: Cada uno de los hijos tendrá el contenedor en su interior.
+
+  # Responsive
